@@ -1,0 +1,218 @@
+/* Padronização do Body para estrutura padrão em todas as páginas */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 99%;
+    margin: 0 auto;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Padronização geral para estrutura padrão em todas as páginas */
+html {
+    zoom: 100%;
+}
+
+/* Centralização geral do conteúdo */
+main,
+header,
+footer {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Padronização do Header para estrutura padrão em todas as páginas */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    width: 100%;
+}
+
+header img.logo {
+    height: 60px;
+    width: auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Padronização do Footer para estrutura padrão em todas as páginas  */
+footer {
+    background-color: #e1ecf7;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Faz o footer ocupar a parte inferior da tela */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    flex: 1; /* Permite que essa parte ocupe espaço */
+}
+
+.social-media {
+    flex: 1;
+    text-align: right; /* Alinha o texto à direita */
+}
+
+/* Menu dropup */
+.dropup {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px; /* Define espaçamento interno do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+}
+
+.dropup-content {
+    display: none; /* Esconde o conteúdo do dropup inicialmente */
+    position: absolute; /* Posiciona o conteúdo em relação ao botão */
+    bottom: 100%; /* Faz o conteúdo aparecer acima do botão */
+    background-color: #f0e7e7; /* Cor de fundo do dropup */
+    min-width: 160px; /* Define uma largura mínima do dropup */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao dropup */
+    z-index: 1; /* Garante que o dropup fique acima de outros elementos */
+}
+
+.dropup:hover .dropup-content {
+    display: block;
+}
+
+.dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropup-content a:hover {
+    background-color: #ddd;
+}
+
+/* Padronização para Sections de informações */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.info-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text h2 {
+    margin: 10px 0;
+}
+
+.info-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Carrossel */
+.carrossel {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.carrossel .slide {
+    min-width: 100%;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
